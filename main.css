@@ -9,6 +9,11 @@ body
 	margin-left: 0;
 	margin-right: 0;
 	background-color: #FFCE86;
+	height: 100%;
+}
+html, body
+{
+	cursor: url("Images/fox-cursor.png") 16 16, auto !important;
 }
 .page /*This is the main content of the body*/
 {
@@ -49,7 +54,7 @@ header img
 }
 footer
 {
-	background-color: #99DAFF;
+	background-color: #806B4E;
 	padding-bottom: 60px;
 	padding-top: 40px;
 }
@@ -58,6 +63,14 @@ footer div
 	display: flex;
 	justify-content: center;
 	
+}
+.social-icons a
+{
+  margin-left: 12px; /* spacing between icons */
+}
+.footerLogos
+{
+	width: 50px;
 }
 .sitename/*This is the main title*/
 {
@@ -131,6 +144,15 @@ footer div
 	align-items: center;
 	justify-content: center;
 }
+.standPage
+{
+	width: 60%;
+}
+.standImage
+{
+	width: 30%;
+	border-radius: 8px;
+}
 .helpPage
 {
 	width: 400px;
@@ -184,7 +206,22 @@ footer div
 	height: 120px;
 	object-fit: contain;
 }
-
+/*specific to the laws page*/
+.lawsPage
+{
+	width: 400px;
+}
+.lawButton
+{
+	border-radius: 5px;
+	text-decoration: none;
+	color: inherit;
+	background-color: #FFCE86;
+	padding: 10px 16px;
+	margin-top: 10px;
+	font-weight: bold;
+	display: inline-block;
+}
 
 .test /*This exists to test out things and to give it space*/
 {

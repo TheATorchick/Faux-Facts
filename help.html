@@ -33,7 +33,6 @@
 				<div class="dropdown">
   				<button class="dropbtn">Resources</button>
 					<div class="dropdown-content">
-			    		<a href="#">Blank Page</a>
 					    <a href="other-orgs.html">Other Organizations</a>
 		 			</div>
 				</div>
@@ -61,18 +60,18 @@
 	<br>
 	<section>
 		<div class="ordered">
-			<div style="width: 400px;" class="bubble">
+			<div style="text-align: center;">
 				<h2>Ways to help</h2>
 				<p>There are multiple ways to help, and clicking a link below will direct you to pages that will provide more information</p>
 			</div>
 		</div>
 		<br>
 		<div class="ordered">
-			<a href="donate.html" class="bubble helpPage hover">
+			<a href="donate.html" class="bubble helpPage hover fade">
 				<h2>Donations</h2>
 				<p>To learn about the organizations you can donate to, click here!</p>
 			</a>
-			<a href="laws.html" class="bubble helpPage hover">
+			<a href="laws.html" class="bubble helpPage hover fade">
 				<h2>Legislation</h2>
 				<p>To learn about laws that are currently in place and those we are looking to push, click here!</p>
 			</a>
@@ -81,9 +80,57 @@
 	<br>
 	<!-- footer-->
 		<footer>
-			<div>
-				<p>&copy; Sean Kelley 2026</p>
+			<div style="gap: 40px;">
+				<p>&copy; Sean Kelley and Faux Facts 2026</p>
+				<div style="align-content: right;">
+					<a href="https:facebook.com"><img class="footerLogos social-icons" src="Images/Facebook.png" alt="Facebook"></a>
+					<a href="https:instagram.com"><img class="footerLogos social-icons" src="Images/instagram.png" alt="instagram"></a>
+					<a href="https:linkedin.com"><img class="footerLogos social-icons" src="Images/Linkedin.png" alt="LinkedIn"></a>
+				</div>
+				<div>
+					<p>Stay in contact: </p>
+					<input type="text" placeholder="Enter Email">
+				</div>
 			</div>
 		</footer>
+	<div id="lightbox">
+		<span id="lightbox-close">&times;</span>
+		<img id="lightbox-img" alt="">
+	</div>
+	<script>
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.getElementById("lightbox-close");
+
+const images = document.querySelectorAll(".ordered img");
+
+// Open lightbox when image is clicked
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    lightboxImg.src = img.src;
+    lightbox.classList.add("show");
+  });
+});
+
+// Close with X button
+closeBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  lightbox.classList.remove("show");
+});
+
+// Close when clicking background
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    lightbox.classList.remove("show");
+  }
+});
+
+// Close with ESC key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    lightbox.classList.remove("show");
+  }
+});
+</script>
 </body>
 </html>
